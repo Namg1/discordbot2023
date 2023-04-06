@@ -150,4 +150,4 @@ class MyClient(discord.Client):
 intents = discord.Intents.default()
 intents.message_content = True
 client = MyClient(intents=intents)
-client.run(BOT_TOKEN)
+client.run('MTAyMDY5NTQ1NTcyNzg4NjM2Ng.GFhmEI.MdHXlUgU_rAuDF792y4wqgxqzwzTVgm2X7BuGw')
