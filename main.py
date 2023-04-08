@@ -136,14 +136,6 @@ class MyClient(discord.Client):
                     #delete old poll message
                     await poll.delete()
 
-        if channel in restricted_channels:
-            delete_in_restrict = 1
-            await message.add_reaction('❌')
-            await message.channel.purge(limit=delete_in_restrict + 1)
-            await asyncio.sleep(0.5)
-            await message.channel.send(f"{message.author.mention}You can't use commands in "
-                                       f"{message.channel.mention}", delete_after=1.5)
-
 
 intents = discord.Intents.default()
 intents.message_content = True
