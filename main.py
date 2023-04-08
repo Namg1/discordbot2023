@@ -17,7 +17,7 @@ class MyClient(discord.Client):
 
     async def on_message(self, message):
         channel = message.channel.name
-        restricted_channels = ["chat", "chung", "nối từ"]  # List of restricted channels
+        restricted_channels = ["chat"]  # List of restricted channels
         if message.author.bot:
             return
         if message.content.startswith(prefix):
@@ -46,8 +46,6 @@ class MyClient(discord.Client):
                                     "delete: 'number' - Delete user's number prompt\n"
                                     "poll: 'text' - first text is question(s) next text is option(s), you split by';'\n"
                                     "-------------------------------------------------\n"
-                                    "❗POLL STILL ON DEVELOP, WE WILL FIX IT SOON❗\n"
-                                    "💠There will be some update in the future💠\n"
                                     "```")
             if command.startswith('google:'):
                 gg = command.split(": ", 2)[1:]
@@ -150,4 +148,4 @@ class MyClient(discord.Client):
 intents = discord.Intents.default()
 intents.message_content = True
 client = MyClient(intents=intents)
-client.run('MTAyMDY5NTQ1NTcyNzg4NjM2Ng.GFhmEI.MdHXlUgU_rAuDF792y4wqgxqzwzTVgm2X7BuGw')
+client.run(BOT_TOKEN)
