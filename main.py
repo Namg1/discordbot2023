@@ -20,7 +20,7 @@ async def upload(ctx):
 
 @bot.command()
 async def send(ctx):
-    channel = ctx.channel.name
+    channel = ctx.channel
     if uploaded_images:
         image_url = random.choice(uploaded_images)
         await channel.send(image_url)
